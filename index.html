@@ -6,7 +6,7 @@
         content="ストーリーからロボットの作り方まで">
   <meta name="keywords" content="Agricultural Robot, Mechanical Weeding, Mingei">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>対話可能な選択的機械除草ロボット</title>
+  <title>OHANA-ROBOT : 対話可能な選択的機械除草ロボット</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -179,7 +179,7 @@
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">ohana-robot</span> は畝を跨いでバリカン除草を行うロボットです．
+        <span class="dnerf">ohana-robot</span> は畝を跨いでバリカン除草を行う対話型ロボットです．
       </h2>
     </div>
   </div>
@@ -252,8 +252,8 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            OHANA-ROBOTは，革新的な農耕民具です．バリカン除草を採用し,LLMを活用して自然言語を用いた操作が可能で，ビジョンセンサのみで半自律走行を目指します．
-            ライフスタイルを反映できるようにカスタマイズ性の高くシンプルなデザインにしました．
+            OHANA-ROBOTは，革新的な農耕民具です．バリカン除草を採用し,LLMを活用して自然言語を用いた操作が可能で，ビジョンセンサのみで半自律走行を実現します．
+            
           </p>
           <p>
             OHANA-ROBOTは，農業の未来を担う次世代の農業機械として，農業の効率化と労働力不足の解消に貢献することを放棄しています．
@@ -327,41 +327,30 @@
     <!-- Animation. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
+        <h2 class="title is-3">Visual Navigation</h2>
         <div class="content has-text-justified">
           <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
+            大型機械の入らない農地は極めて複雑な環境で，ビジョンセンサのみによる自律移動タスクは極めて困難です．
+            そこで，GO_TO()とGO_ALONG()という２つの実行可能コマンドに集約してみました．
+            たったこれだけで，複雑な農地環境における移動の様々なタスクが実現できます．
+            LLMはあなたの指示を解釈し，実行可能コマンドに置き換えます．
+          </p>
+        </div>
+
+        <!-- go to person -->
+        <h3 class="title is-4">GO_TO("person")</h3>
+        <div class="content has-text-justified">
+          <p>
+            「ついてきて」というと，LLMがGO_TO("person")というコマンドに変換し，あなたを検出してついていくプログラムが実行されます．
           </p>
         </div>
         <div class="columns is-vcentered interpolation-panel">
           <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
+            <img src="./static/videos/goto_person.gif"/>
           </div>
         </div>
         <br/>
-        <!--/ Interpolating. -->
+        <!--/ go to person -->
 
         <!-- Re-rendering. -->
         <h3 class="title is-4">Re-rendering the input video</h3>
