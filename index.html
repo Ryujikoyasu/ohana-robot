@@ -39,14 +39,20 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
-
+<!-- 
 <style>
-  /* .responsive-gif {
-  width: 500%;
-  height: auto;
-  max-width: 1200px; /* 最大幅を500pxに設定 */
+    .media-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-</style>
+    .video-container, .gif-container {
+      flex: 1; /* 各コンテナに等しいスペースを割り当て */
+      padding: 10px; /* コンテナ間のスペース */
+    }
+
+</style> -->
 
 </head>
 <body>
@@ -209,7 +215,7 @@
           </p>
           <p>
             OHANA-ROBOTは，農業の未来を担う次世代の農業機械として，農業の効率化と労働力不足の解消に貢献することを放棄しています．
-            その代わり，里山と共生することを目指して，今も自律化や機能の追加といった研究開発を進めています．
+            その代わり，里山と共生することを目指して，今も研究開発を進めています．
           </p>
           <p>
             OHANA-ROBOTは，オープンなコミュニティを形成します．
@@ -227,6 +233,7 @@
         <div class="content has-text-centered">
           <video id="replay-video"
           controls
+          autoplay
           muted
           preload="auto"
           playsinline
@@ -273,6 +280,7 @@
         <div class="content has-text-centered">
           <video id="replay-video"
           controls
+          autoplay
           muted
           preload="auto"
           playsinline
@@ -297,21 +305,14 @@
             GO_ALONG()は，道や畝などの特定の物体をなぞりながら移動するコマンドです．
           </p>
           <p>
-            例えば，GO_ALONG("crop_row")とすると，作物列を追従しながら移動するプログラムが実行されます．
+            「この畝進め」という指示は，GO_ALONG("crop_row")に変換され，作物列を追従するプログラムが実行されます．
           </p>
         </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload="auto"
-                 playsinline
-                 loop
-                 width="100%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
+          <div class="gif-container">
+            <img src="./static/videos/crop_row.gif" alt="Your GIF" width="100%">
+          </div>
         </div>
+        
         <!--/ Re-rendering. -->
 
       </div>
