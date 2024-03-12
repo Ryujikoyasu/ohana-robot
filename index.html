@@ -39,9 +39,9 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
-<!-- 
+
 <style>
-    .media-container {
+    /* .media-container {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -49,10 +49,18 @@
 
     .video-container, .gif-container {
       flex: 1; /* 各コンテナに等しいスペースを割り当て */
-      padding: 10px; /* コンテナ間のスペース */
+      /* padding: 10px; コンテナ間のスペース */
+    /* } */
+    .donate-link {
+    color: #007bff; /* リンクの色 */
+    text-decoration: none; /* 下線を消す */
+    font-weight: bold; /* フォントを太くする */
     }
-
-</style> -->
+    .donate-link:hover {
+      text-decoration: underline; /* ホバー時に下線を表示 */
+      color: #0056b3; /* ホバー時の色を変更 */
+    }
+</style>
 
 </head>
 <body>
@@ -363,6 +371,10 @@
         <div class="content">
           <p>
             OHANA-ROBOTコミュニティに入りたい方は，こちらから連絡ください．
+          </p>
+          <p>
+            また、私を支援したい方は、
+            <a href="https://paypal.me/ryuddi" target="_blank" rel="noopener noreferrer" class="donate-link">PayPalで寄付</a>をお願いします。
           </p>
 
         </div>
